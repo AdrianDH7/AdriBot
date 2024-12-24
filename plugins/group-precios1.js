@@ -6,7 +6,7 @@ m.react('💫');
 const message = "*AQUI ESTAN LOS PRECIOS.*\n\n> 1 semana de spma= 1k de diamantes\n\n> 5 días = 800 diamantes\n\n> 3 días =500 diamantes";
 if (m.isGroup) {
 // la del se saca con el tourl
-const imageUrl = 'https://qu.ax/OTxye.jpg'; // Aqui ponen la url perres
+const imageUrl = 'https://i.ibb.co/f8W3cKd/file.jpg'; // Aqui ponen la url perres
 // No Quiten Los Créditos 😑 
 await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: message }, { mimetype: 'image/jpeg' });
 }
