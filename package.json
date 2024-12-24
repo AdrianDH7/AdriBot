@@ -1,5 +1,5 @@
 {
-    "name": "BarbozaBot-Ai",
+    "name": "ObisonBot-Ai",
     "version": "1.0.0",
     "description": "Is the best",
     "main": "index.js",
@@ -26,17 +26,17 @@
         "PrakBot",
         "baileys-md"
     ],
-    "homepage": "https://github.com/WillZek/CrowBot-Ai",
+    "homepage": "https://github.com/WillZek/ObisonBot",
     "author": {
         "name": "WillZek"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/WillZek/CrowBot-Ai.git"
+        "url": "git+https://github.com/WillZek/ObisonBot.git"
     },
     "bugs": {
         "url":
-"https://github.com/WillZek/CrowBot-Ai/issues"
+"https://github.com/WillZek/ObisonBot/issues"
     },
     "license": "MIT",
     "dependencies": {
