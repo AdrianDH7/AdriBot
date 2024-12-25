@@ -5,7 +5,7 @@ let name = ' ☠︎︎𝑶𝑩𝑰𝑺𝑶𝑵𝑩𝑶𝑻 - 𝑪𝒉𝒂𝒏�
 let imagenes = ["https://files.catbox.moe/w1ciuo.jpg",
 "https://files.catbox.moe/w1ciuo.jpg",
 "https://files.catbox.moe/xfk85e.jpg",
-"https://i.ibb.co/FDyNygX/file.jpg"]
+"https://files.catbox.moe/0jo2y1.jpg"]
 
 let icono = imagenes[Math.floor(Math.random() * imagenes.length)]
 
