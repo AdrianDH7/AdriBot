@@ -32,6 +32,8 @@ let handler = async (m, { conn, args, command, usedPrefix }) => {
     }
 };
 
+handler.help = ['phsearch'];
+handler.tag = ['search'];
 handler.command = /^(phsearch|pornhubsearch)$/i;
 export default handler;
 
