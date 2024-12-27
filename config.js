@@ -10,6 +10,7 @@ import axios from 'axios'
 
 global.owner = [
   ['50557865603', 'ObisonBot-Ai', true],
+  ['19788774690', 'Vill Sombra', true]
 ]
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
