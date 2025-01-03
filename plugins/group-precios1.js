@@ -1,4 +1,4 @@
-// Código Hecho Por Niño Piña wa.me/50557865603
+// Código Hecho Por AdriBot wa.me/5646069199
 let handler = async (m, { conn }) => {
 // Aqui Pueden Cambiar la reacción si gustan pijes
 m.react('💫');
