@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 
 export async function before(m, { conn }) {
-let name = ' ☠︎︎𝑶𝑩𝑰𝑺𝑶𝑵𝑩𝑶𝑻 - 𝑪𝒉𝒂𝒏𝒏𝒆𝒍☠︎︎'
+let name = ' ☠︎︎AdriBot - 𝑪𝒉𝒂𝒏𝒏𝒆𝒍☠︎︎'
 let imagenes = ["https://files.catbox.moe/w1ciuo.jpg",
 "https://files.catbox.moe/w1ciuo.jpg",
 "https://files.catbox.moe/xfk85e.jpg",
