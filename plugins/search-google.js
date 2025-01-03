@@ -1,6 +1,6 @@
 /*
  ✨ DERECHOS RESERVADOS DEL AUTOR ✨
-- WillZek (@NiñoPiña)
+- WillZek (@AdriBot)
 */
 
 import { googleIt } from '@bochilteam/scraper';
