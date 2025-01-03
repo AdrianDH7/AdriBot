@@ -11,10 +11,10 @@ let staff = `🍁 *EQUIPO DE AYUDANTES*
 
 🌸COLABORADORES
 
-• Ian
+• Adri
 ⭐ *Rol:* Desarrollador ☁
-🌟 *Número:* 584123989549
-🌟 *Número:* 543876631319 
+🌟 *Número:* 525646069199
+🌟 *Número:*  
 
 await conn.sendFile(m.chat, icons, 'nino.jpg', staff.trim(), fkontak, true, {
 contextInfo: {
