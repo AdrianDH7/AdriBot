@@ -20,7 +20,7 @@ contextInfo: { externalAdReply :{ showAdAttribution: true,
                         sourceUrl: 'https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d',
                         mediaType: 2,
                         description: `Sigue El Canal Por Favor`,
-                        title: `👑 Gracias Por Usar A BarbozaBot, WhatsApp Bot⛄`,
+                        title: `👑 Gracias Por Usar A AdriBot, WhatsApp Bot⛄`,
                         body: `🎄 Powered By WillZek`,          previewType: 0,
                         thumbnail: await (await fetch('https://i.ibb.co/ZfjXNy0/file.jpg')).buffer(),
                         mediaUrl: canal
