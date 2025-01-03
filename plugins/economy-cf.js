@@ -42,4 +42,4 @@ handler.command = ['cf', 'suerte', 'caracruz'];
 
 export default handler;
 
-bot Barboza 
+AdriBot 
