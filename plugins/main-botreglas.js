@@ -13,7 +13,7 @@ let obison = `☃️ *Respeta las reglas de AdriBot*\n
 ☃️ 𝗔𝘃𝗶𝘀𝗼: *Puedes apoyarnos dejando una estrellita ☃️ al repositorio oficial de AdriBot-Ai.*
 
 ${global.md}`.trim()
-await conn.reply(m.chat, obison, m, fake)
+await conn.reply(m.chat, AdriBot, m, fake)
 
 }
 handler.help = ['botreglas']
