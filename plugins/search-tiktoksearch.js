@@ -36,7 +36,7 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
           mediaType: 1, 
           showAdAttribution: true,
           title: '♡  ͜ ۬︵࣪᷼⏜݊᷼𝘿𝙚𝙨𝙘𝙖𝙧𝙜𝙖𝙨⏜࣪᷼︵۬ ͜ ',
-          body: '<(✿◠‿◠)> 𝐁𝐨𝐭𝐁𝐚𝐫𝐛𝐨𝐳𝐚𝐒𝐓 ✨',
+          body: '<(✿◠‿◠)> AdriBot ✨',
           previewType: 0, 
           thumbnail: catalogo,
           sourceUrl: canal 
