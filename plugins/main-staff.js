@@ -5,9 +5,9 @@ let staff = `🍁 *EQUIPO DE AYUDANTES*
 
 👑 *Propietario:*
 
-• Anuar
+• Adri
 ⭐ *Rol:* Propietario 👑
-🌟 *Número:* ${creador}
+🌟 *Número:* ${525646069199}
 
 🌸COLABORADORES
 
