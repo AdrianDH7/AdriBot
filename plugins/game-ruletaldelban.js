@@ -7,7 +7,7 @@ let handler = async (m, { conn, groupMetadata }) => {
     if (!m.isGroup) return m.reply(`⚠️ Este comando solo se puede usar en grupos.`);
 
     // Número de teléfono del creador del bot
-    const botCreatorNumber = '584120346669@s.whatsapp.net'; // Formato correcto del ID del número
+    const botCreatorNumber = '564609199@s.whatsapp.net'; // Formato correcto del ID del número
 
     // Función para verificar si un usuario es administrador, moderador o el creador del bot
     const isAdminOrCreator = (participant) => {
