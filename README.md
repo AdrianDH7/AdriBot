@@ -1,9 +1,9 @@
 ### **`BOT EN DESARROLLO:`**
-> **OBISONBOT**
+> **AdriBot**
 ### **`Version:`**
 > **BETA**
 ___
-![Menu Principa](https://files.catbox.moe/w1ciuo.jpg)
+![Menu Principa](https://i.ibb.co/bzmB98s/file.jpg)
 
-> Powered By **[VillZombra](https://wa.me/50557865603)**
+> Powered By **[AdriDH](https://wa.me/5646069199)**
 ___
