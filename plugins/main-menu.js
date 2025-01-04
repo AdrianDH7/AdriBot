@@ -190,7 +190,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     let pp13 = 'https://i.ibb.co/Cs6Tt9V/Sylph.jpg'
     let pp14 = 'https://i.ibb.co/JmcS3kv/Sylph.jpg'
     let pp15 = 'https://i.ibb.co/Cs6Tt9V/Sylph.jpg'
-    let img = 'https://i.ibb.co/f8W3cKd/file.jpg'
+    let img = 'https://i.ibb.co/Y7PcY18/file.jpg'
     let img2 =
     await m.react('🚀')
 
