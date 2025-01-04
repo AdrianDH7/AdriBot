@@ -1,4 +1,3 @@
-
 import { createHash } from 'crypto'
 import fs from 'fs'
 import fetch from 'node-fetch'
@@ -21,13 +20,13 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   user.regTime = + new Date
   user.registered = true
   let sn = createHash('md5').update(m.sender).digest('hex')
-  let img = await (await fetch(`https://i.ibb.co/Y7PcY18/file.jpg()
-  let txt = ` –  *R E G I S T R O  -  V I L L*\n\n`
-      txt += `┌  ❄️  *NOMBRE* : ${name}\n`
-      txt += `│  ❄️  *EDAD* : ${age} años\n`
-      txt += `│  ❄️  *NUMERO DE SERIE*\n`
-      txt += `└  ❄️  ${sn}`
-await conn.sendAi(m.chat, botname, textbot, txt, img, img, canal, m)
+  let img = await (await fetch(`https://i.ibb.co/s9N9QhG/file.jpg`)).buffer()
+  let txt = ` –  *R E G I S T R O  -  A D R I*\n\n`
+      txt += `┌  ✩  *NOMBRE* : ${name}\n`
+      txt += `│  ✩  *EDAD* : ${age} años\n`
+      txt += `│  ✩  *NUMERO DE SERIE*\n`
+      txt += `│  ✩  ${sn}`
+await conn.sendAi(m.chat, namebot, textbot, txt, img, img, canal, m)
 await m.react('✅')
 }
 handler.help = ['reg'].map(v => v + ' *<nombre.edad>*')
