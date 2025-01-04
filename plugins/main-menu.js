@@ -60,7 +60,7 @@ const defaultMenu = {
 ┃☁︎ 𑁍 *Database:*  %totalreg
 ╰━─━─━─≪𖠌≫─━─━─━╯
      
-   ⏤͟͟͞͞߷𝗢𝗕𝗜𝗦𝗢𝗡ꗄ➺
+   ⏤͟͟͞͞߷ADRI➺
 ◆━━━━━━━▣✵▣━━━━━━━━◆ 
  %readmore
 \t\t\t_*Lista De Comandos*_ ﭢ
@@ -205,7 +205,7 @@ global.rcanal = {
  contextInfo: {
              isForwarded: true,
     forwardedNewsletterMessageInfo: {
-      newsletterJid: "120363375378707428@newsletter",
+      newsletterJid: "120363386595811622@newsletter",
       serverMessageId: 100,
       newsletterName: name,
    }, 
