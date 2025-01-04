@@ -22,13 +22,13 @@ global.prems = []
 
 global.packname = `[ ⛄Sticker Maker`
 global.author = 'FELIZ NAVIDAD🎄]'
-global.stickpack = '© ObisonBot'
+global.stickpack = '© AdriBot'
 global.stickauth = 'By VillZombra'
 global.wm = 'Obison 🌸'
 global.dev = '© Powered By Villzombra ❀'
 global.wait = '❄️ *Aɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ, sᴏʏ ʟᴇɴᴛ𝙾... ฅ^•ﻌ•^ฅ\n\n> Feliz Navidad🎄*'
-global.botname = '[ 🎅 𝐎𝐛𝐢𝐬𝐨𝐧 𝐀𝐢 𝐖𝐡𝐚𝐬𝐀𝐩𝐩 𝐁𝐨𝐭 🎄]'
-global.textbot = `❄️ObisonBot By Villzombra ⛄`
+global.botname = '[ 🎅 AdriBot 𝐀𝐢 𝐖𝐡𝐚𝐬𝐀𝐩𝐩 𝐁𝐨𝐭 🎄]'
+global.textbot = `❄️AdriBot By Villzombra ⛄`
 global.listo = '*Aqui tiene ฅ^•ﻌ•^ฅ*'
 global.namechannel = '🎁𝐅𝐄𝐋𝐈𝐙 𝐍𝐀𝐕𝐈𝐃𝐀𝐃🎅'
 
