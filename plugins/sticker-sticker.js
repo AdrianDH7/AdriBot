@@ -42,7 +42,9 @@ if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextI
 
 else return conn.reply(m.chat, '🪩 *_Oops! La conversión no pudo completarse. Por favor, envía primero una imagen, video o gif, y luego utiliza el comando nuevamente._*', m, rcanal)
 
-
+} catch (error) {
+m.reply(`Error: ${error.message}`);
+m.react('✖️');
 }}
 handler.help = ['stiker <img>', 'sticker <url>']
 handler.tags = ['sticker']
