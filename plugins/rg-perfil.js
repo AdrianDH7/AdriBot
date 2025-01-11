@@ -3,8 +3,8 @@ import fetch from 'node-fetch';
 import fs from 'fs';
 
 const loadMarriages = () => {
-    if (fs.existsSync('./storage/databases/marry.json')) {
-        const data = JSON.parse(fs.readFileSync('./storage/databases/marry.json', 'utf-8'));
+    if (fs.existsSync('./media/database/marry.json')) {
+        const data = JSON.parse(fs.readFileSync('./media/database/marry.json', 'utf-8'));
         global.db.data.marriages = data;
     } else {
         global.db.data.marriages = {};
@@ -21,7 +21,7 @@ var handler = async (m, { conn }) => {
         who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
     }
 
-    let pp = await conn.profilePictureUrl(who, 'image').catch(_ => imagen2);
+    let pp = await conn.profilePictureUrl(who, 'image').catch(_ => imagen1);
     let { premium, level, genre, birth, description, estrellas, exp, lastclaim, registered, regTime, age, role } = global.db.data.users[who] || {};
     let username = conn.getName(who);
 
@@ -84,5 +84,6 @@ handler.register = true;
 handler.group = true;
 handler.tags = ['rg'];
 handler.command = ['profile', 'perfil'];
+handler.estrellas = 2;
 
 export default handler;
