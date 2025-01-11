@@ -20,6 +20,10 @@ var handler = async (m, { conn }) => {
     } else {
         who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
     }
+let imagen1 = ["https://i.ibb.co/bzmB98s/file.jpg",
+"https://i.ibb.co/bzmB98s/file.jpg",
+"https://i.ibb.co/bzmB98s/file.jpg",
+"https://i.ibb.co/bzmB98s/file.jpg"]
 
     let pp = await conn.profilePictureUrl(who, 'image').catch(_ => imagen1);
     let { premium, level, genre, birth, description, estrellas, exp, lastclaim, registered, regTime, age, role } = global.db.data.users[who] || {};
@@ -81,10 +85,7 @@ var handler = async (m, { conn }) => {
 
     conn.sendFile(m.chat, pp, 'perfil.jpg', `${premium ? prem.trim() : noprem.trim()}`, m, { mentions: [who] });
 }
-let imagen1 = ["https://i.ibb.co/bzmB98s/file.jpg",
-"https://i.ibb.co/bzmB98s/file.jpg",
-"https://i.ibb.co/bzmB98s/file.jpg",
-"https://i.ibb.co/bzmB98s/file.jpg"]
+
 
 handler.help = ['profile'];
 handler.register = true;
