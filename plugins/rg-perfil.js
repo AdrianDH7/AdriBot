@@ -77,13 +77,14 @@ var handler = async (m, { conn }) => {
 │⧼✨⧽ *ᴇxᴘᴇʀɪᴇɴᴄɪᴀ:* ${exp || 0}
 │⧼⚜️⧽ *ʀᴀɴɢᴏ:* ${role}
 ╰───⪨ *𝓤𝓼𝓾𝓪𝓻𝓲𝓸 𝓓𝓮𝓼𝓽𝓪𝓬𝓪𝓭𝓸* ⪩`.trim();
+
+
+    conn.sendFile(m.chat, pp, 'perfil.jpg', `${premium ? prem.trim() : noprem.trim()}`, m, { mentions: [who] });
+}
 let imagen1 = ["https://i.ibb.co/bzmB98s/file.jpg",
 "https://i.ibb.co/bzmB98s/file.jpg",
 "https://i.ibb.co/bzmB98s/file.jpg",
 "https://i.ibb.co/bzmB98s/file.jpg"]
-
-    conn.sendFile(m.chat, pp, 'perfil.jpg', `${premium ? prem.trim() : noprem.trim()}`, m, { mentions: [who] });
-}
 
 handler.help = ['profile'];
 handler.register = true;
