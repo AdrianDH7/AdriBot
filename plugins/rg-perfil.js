@@ -38,7 +38,7 @@ var handler = async (m, { conn }) => {
     let userNationalityData = api.data.result;
     let userNationality = userNationalityData ? `${userNationalityData.name} ${userNationalityData.emoji}` : 'Desconocido';
 
-let imagenes = ["https://i.ibb.co/bzmB98s/file.jpg",
+let imagen1 = ["https://i.ibb.co/bzmB98s/file.jpg",
 "https://i.ibb.co/bzmB98s/file.jpg",
 "https://i.ibb.co/bzmB98s/file.jpg",
 "https://i.ibb.co/bzmB98s/file.jpg"]
