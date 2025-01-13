@@ -1,52 +1,56 @@
-import axios from 'axios'
-let handler = async (m,{ command, args, text, usedPrefix}) => {
-if (!text) throw `Ingresa el nombre de la canción a buscar`;
-    try{
-        if(command.toLowerCase() !=="soundcloudr"){
-            let response = await axios.get(`https://m.soundcloud.com/search/sounds?q=${text}`);
-            let data=response.data
-            let regex = /(?<="permalink_url":")[^"]*/g;
-            let urls = data.match(regex);
+import fetch from 'node-fetch';
+import axios from 'axios';
 
-            let regex2 = /(?<="permalink":")[^"]*/g
-            let nombres = data.match(regex2);
+let handler = async (m, { conn, command, args, text, usedPrefix }) => {
+if (!text) return conn.reply(m.chat, `🌠INGRESE EL NOMBRE DE ALGUNA CANCION *Soundcloud.*`, m, rcanal)
 
+await m.react('🕒');
+try {
+let api = await fetch(`https://apis-starlights-team.koyeb.app/starlight/soundcloud-search?text=${encodeURIComponent(text)}`);
+let json = await api.json();
+let { url } = json[0];
 
-            let listSections = [];
-            for (let index = 0; index< urls.length; index++) {        
-                let counts = urls[index].split('/').length - 1;
-                if(counts>3){
-                    listSections.push({
-                        rows: [
-                            {
-                                header: `Music ${index+1}`,
-                                title: "",
-                                description: `${nombres[index]}\n`, 
-                                id: `${usedPrefix}soundcloudr ${urls[index]}`
-                            }
-                        ]
-                    });
-                }
-            }
+let api2 = await fetch(`https://apis-starlights-team.koyeb.app/starlight/soundcloud?url=${url}`);
+let json2 = await api2.json();
 
-        return await conn.sendList(m.chat, `${htki} *𝙍𝙀𝙎𝙐𝙇𝙏𝘼𝘿𝙊𝙎* ${htka}\n`, `\n𝘽𝙪𝙨𝙦𝙪𝙚𝙙𝙖 𝙙𝙚: ${text}`, `𝗕 𝗨 𝗦 𝗖 𝗔 𝗥`, listSections, fkontak);
-        }
+let { link: dl_url, quality, image } = json2;
 
-        let dddata = await axios.get(`https://btch.us.kg/soundcloud?url=${text}`)
-        let ddlink=dddata.data.result.url
-        let ddname=dddata.data.result.title
-        let portada=dddata.data.result.imageURL
-        await delay(2000)
-        conn.sendMessage(m.chat, {image: {url: portada}, caption: `Espera por favor...\n\nEnviando: ${ddname}\n\n${wm}`}, {quoted: m});
-        await delay(15000)
-        conn.sendMessage(m.chat, { audio: { url: ddlink }, fileName: `${ddname}`,mimetype: 'audio/mpeg'},{ quoted: m })   
-    }catch(e){
-    return m.reply("Error")
-    }}
+let audio = await getBuffer(dl_url);
 
-handler.command = /^(soundcloud|soundcloudr)$/i
-handler.limit = 1
-handler.register = true
+let txt = `*\`- S O U N C L O U D - M U S I C -\`*\n\n`;
+    txt += `        ✩  *Título* : ${json[0].title}\n`;
+    txt += `        ✩  *Calidad* : ${quality}\n`;
+    txt += `        ✩  *Url* : ${url}\n\n`;
+    txt += `> 🚩 *${textbot}*`
+
+await conn.sendFile(m.chat, image, 'thumbnail.jpg', txt, m, null, rcanal);
+await conn.sendMessage(m.chat, { audio: audio, fileName: `${json[0].title}.mp3`, mimetype: 'audio/mpeg' }, { quoted: m })
+
+await m.react('✅');
+} catch {
+await m.react('✖️');
+}}
+
+handler.help = ['soundcloud *<búsqueda>*']
+handler.tags = ['downloader']
+handler.command = ['soundcloud', 'sound', 'play']
+
 export default handler
 
-const delay = time => new Promise(res => setTimeout(res, time))
+const getBuffer = async (url, options) => {
+try {
+const res = await axios({
+method: 'get',
+url,
+headers: {
+'DNT': 1,
+'Upgrade-Insecure-Request': 1,
+},
+...options,
+responseType: 'arraybuffer',
+});
+return res.data;
+} catch (e) {
+console.log(`Error : ${e}`);
+}
+};
