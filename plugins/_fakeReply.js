@@ -6,6 +6,10 @@ let imagenes = ["https://i.ibb.co/Y7PcY18/file.jpg",
 "https://i.ibb.co/bzmB98s/file.jpg",
 "https://i.ibb.co/0QLsSJy/file.jpg",
 "https://i.ibb.co/Y7PcY18/file.jpg"]
+//Reacciones De Comandos.!
+global.rwait = '🕒'
+global.done = '✅'
+global.error = '✖️'
 
 let icono = imagenes[Math.floor(Math.random() * imagenes.length)]
 
@@ -27,7 +31,10 @@ global.rcanal = {
     thumbnailUrl: icono, 
     sourceUrl: canal, 
     mediaType: 1, 
-    renderLargerThumbnail: false }, 
+    renderLargerThumbnai//Reacciones De Comandos.!
+global.rwait = '🕒'
+global.done = '✅'
+global.error = '✖️'l: false }, 
     }, 
     }
 
