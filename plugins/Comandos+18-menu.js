@@ -5,9 +5,8 @@ import { join } from 'path'
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, usedPrefix, command, args, usedPrefix: _p, __dirname, isOwner, text, isAdmin, isROwner }) => {
-if (!db.data.chats[m.chat].nsfw && m.isGroup) throw `𝙇𝙊𝙎 𝘾𝙊𝙈𝘼𝙉𝘿𝙊𝙎 +18 𝙀𝙎𝙏𝘼𝙉 𝘿𝙀𝙎𝘼𝘾𝙏𝙄𝙑𝘼𝘿𝙊𝙎 𝙐𝙎𝙀 #𝙤𝙣 𝙢𝙤𝙙𝙤𝙝𝙤𝙧𝙣𝙮 𝙋𝘼𝙍𝘼 𝘼𝘾𝙏𝙄𝙑𝘼𝙍\n\n+18 𝘾𝙊𝙈𝙈𝘼𝙉𝘿𝙎 𝘼𝙍𝙀 𝘿𝙄𝙎𝘼𝘽𝙇𝙀𝘿 𝙐𝙎𝙀 #𝙤𝙣 𝙢𝙤𝙙𝙤𝙝𝙤𝙧𝙣𝙮 𝙏𝙊 𝙀𝙉𝘼𝘽𝙇𝙀`
-try{
-const { levelling } = '../lib/levelling.js'
+if (!db.data.chats[m.chat].nsfw && m.isGroup) throw `Los comandos +18 están desactivados. Usa #on para activar.`
+try {
 let { exp, limit, level, role } = global.db.data.users[m.sender]
 let { min, xp, max } = xpRange(level, global.multiplier)
 
@@ -20,11 +19,6 @@ day: 'numeric',
 month: 'long',
 year: 'numeric'
 })
-let dateIslamic = Intl.DateTimeFormat(locale + '-TN-u-ca-islamic', {
-day: 'numeric',
-month: 'long',
-year: 'numeric'
-}).format(d)
 let time = d.toLocaleTimeString(locale, {
 hour: 'numeric',
 minute: 'numeric',
@@ -54,31 +48,30 @@ maxexp: xp,
 totalexp: exp,
 xp4levelup: max - exp,
 
-level, limit, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
+level, limit, weton, week, date, time, totalreg, rtotalreg, role,
 readmore: readMore
 }
 text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-//let name = await conn.getName(m.sender)
+
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let mentionedJid = [who]
 let username = conn.getName(who)
 let user = global.db.data.users[m.sender]
-//user.registered = false
 
-let pp = './src/+18.jpg'
+let pp = './storage/img/catalogo.jpg'
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 let fsizedoc = '1'.repeat(10)
-let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: ig, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(gataMenu.getRandom())).buffer(), sourceUrl: redesMenu.getRandom() }}}
+let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: 'Título', body: '👋 ' + username, mediaUrl: 'url', description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch('url')).buffer(), sourceUrl: 'url' }}}
 
-let menuA = `😏 ${lenguajeGB['smsConfi2']()} *${username}*`.trim()
-let menuB = `╭┄〔 *${wm}* 〕┄⊱
-┊დ *${week}, ${date}*
-┊დ *${lenguajeGB['smsBotonM4']()} » ${Object.keys(global.db.data.users).length}* 
+let menuA = `😏 Bienvenido *${username}*`.trim()
+let menuB = `╭┄〔 *Menú* 〕┄⊱
+┊ *${week}, ${date}*
+┊ *Usuarios: ${Object.keys(global.db.data.users).length}* 
 ┊
-┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
-┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
-┊დ *Menu +18»* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+┊ *Rol:* ${role}
+┊ *Nivel:* ${level}*
+┊ *Menu +18:* ${user.premiumTime > 0 ? '✅' : '❌'}
+╰┄┄┄┄〔 *𓃠* 〕┄┄┄┄⊱
 
 ⠇ Menu 🔞
 ∘ _${usedPrefix}nsfwloli_
@@ -114,20 +107,19 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ∘ _${usedPrefix}pack3_
 ∘ _${usedPrefix}videoxxx_
 
-⠇ ${lenguajeGB['smsTex4']()} 🥵
+⠇ Videos 🥵
 ∘ _${usedPrefix}pornovideo | pornovid_
 ∘ _${usedPrefix}pornovidgay | pornogayv_
 ∘ _${usedPrefix}pornolesbivid | pornolesbiv_
 ∘ _${usedPrefix}pornobisexualvid | pornobiv_
 
-⠇ ${lenguajeGB['smsTex5']()} ❤️‍🔥
+⠇ Buscador ❤️‍🔥
 ∘ _${usedPrefix}xnxxsearch | buscarxnxx *texto*_
 ∘ _${usedPrefix}xvideossearch *texto*_
 ∘ _${usedPrefix}xnxxdl | xnxx *enlace*_
 ∘ _${usedPrefix}xvideosdl | xvideos *enlace*_
 
-⠇ ${lenguajeGB['smsTex6']()} 🔥
-${lenguajeGB['smsTex7']()}
+⠇ Más 🔥
 ∘ _${usedPrefix}pornopremium_
 `.trim()
 
@@ -135,7 +127,7 @@ await conn.sendButton(m.chat, menuA, menuB, pp, [
 [lenguajeGB.smsBotonM1(), '.menu'], [lenguajeGB.smsBotonM2(), '/allmenu'], [lenguajeGB.smsBotonM3(), '#inventario']], fkontak, adReply, m) 
 
 } catch (e) {
-await conn.sendButton(m.chat, `\n${wm}`, lenguajeGB['smsMalError3']() + '#report ' + usedPrefix + command, null, [[lenguajeGB.smsMensError1(), `#reporte *${usedPrefix + command}*`]], m)
+await conn.sendButton(m.chat, `\nTítulo`, 'Error al ejecutar el comando. #report ' + usedPrefix + command, null, [[lenguajeGB.smsMensError1(), `#reporte *${usedPrefix + command}*`]], m)
 console.log(`❗❗Error ${usedPrefix + command} ❗❗`)
 console.log(e)        
 }}
@@ -143,7 +135,6 @@ console.log(e)
 handler.help = ['infomenu'].map(v => v + 'able <option>')
 handler.tags = ['group', 'owner']
 handler.command = /^(hornymenu)$/i
-//handler.register = true
 handler.exp = 50
 export default handler
 
