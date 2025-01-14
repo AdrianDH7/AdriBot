@@ -66,7 +66,7 @@ let handler = async (m, { conn, usedPrefix, command, args, usedPrefix: _p, __dir
         let pp = './storage/img/catalogo.jpg'
         let fkontak = { "key": { "participants": "0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` } }, "participant": "0@s.whatsapp.net" }
         let fsizedoc = '1'.repeat(10)
-        let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: 'Menu +18', body: 'By WillZek' + username, mediaUrl: canal, description: null, previewType: 'PHOTO', thumbnail: await (await fetch('url')).buffer(), sourceUrl: canal }}}
+        let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: 'Menu +18', body: 'By WillZek' + username, mediaUrl: canal, description: null, previewType: 'PHOTO', thumbnail: await (await fetch('https://files.catbox.moe/0gel94.jpg')).buffer(), sourceUrl: canal }}}
 
         let menuA = `😏 Bienvenido *${username}*`.trim()
         let menuB = `╭┄〔 *Menú* 〕┄⊱
