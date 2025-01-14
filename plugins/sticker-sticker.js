@@ -38,9 +38,9 @@ else return m.reply(`💫 El url es incorrecto`)
 console.error(e)
 if (!stiker) stiker = e
 } finally {
-if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: '🎩𝐂𝐫𝐨𝐰𝐁𝐨𝐭 - 𝐒𝐭𝐢𝐜𝐤𝐞𝐫✨', body: `CrowBot - ST ${emojis}`, mediaType: 2, sourceUrl: grupo, thumbnail: icons}}}, { quoted: m })
+if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: '🎩𝐀𝐝𝐫𝐢𝐁𝐨𝐭 - 𝐒𝐭𝐢𝐜𝐤𝐞𝐫✨', body: `AdriBot - MD ✨`, mediaType: 2, sourceUrl: canal, thumbnail: icono}}}, { quoted: m })
 
-else return conn.reply(m.chat, `${emojis} *_La conversión ha fallado, intenta enviar primero imagen/video/gif y luego responde con el comando._*\n\n> ${emojis} ${publi} ${emojis}`, m, rcanal)
+else return conn.reply(m.chat, `${emojis} *_La conversión ha fallado, intenta enviar primero imagen/video/gif y luego responde con el comando._*\n\n> ❤️ Sigue El Canal ❤️`, m, rcanal)
 
 
 }}
@@ -52,4 +52,4 @@ handler.estrellas = 3;
 export default handler
 
 const isUrl = (text) => {
-return text.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)(jpe?g|gif|png)/, 'gi'))} 
+return text.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)(jpe?g|gif|png)/, 'gi'))}
