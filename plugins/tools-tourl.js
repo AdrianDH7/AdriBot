@@ -1,3 +1,7 @@
+/* Gracias A WillZek
+- https://github.com/WillZek
+*/
+
 import fs from 'fs'
 import FormData from 'form-data'
 import axios from 'axios'
@@ -35,7 +39,7 @@ let handler = async (m, { conn }) => {
         txt += `*🔖 Extension* : ${api.data.data.image.extension}\n`
         txt += `*🔖 Delete* : ${api.data.data.delete_url}\n\n`
         txt += `© By: AdriBot`
-    await conn.sendFile(m.chat, api.data.data.url, 'ibb.jpg', txt, m, null, fake)
+    await conn.sendFile(m.chat, api.data.data.url, 'ibb.jpg', txt, m, null, rcanal)
   } else {
     await m.react('✅')
   }
