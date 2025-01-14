@@ -131,8 +131,7 @@ let handler = async (m, { conn, usedPrefix, command, args, usedPrefix: _p, __dir
 await conn.sendMessage(m.chat, { text: menuA + '\n' + menuB, mentions: mentionedJid }, { quoted: m, contextInfo: fkontak })
 
 } catch (e) {
-    await conn.sendMessage(m.chat, { text: `\nTítulo`, footer: 'Error al ejecutar el comando. #report ' + usedPrefix + command, buttons: [{ buttonId: `#reporte *${usedPrefix + command}*`, buttonText: { displayText: 'Reportar error' } }] }, { quoted: m })
-    console.log(`❗❗Error ${usedPrefix + command} ❗❗`)
+    await conn.sendMessage(m.chat, { text: `\nTítulo`, footer: 'Error al ejecutar el comando. #report ' + usedPrefix + command }, { quoted: m })
     console.log(e)        
 }}
 
