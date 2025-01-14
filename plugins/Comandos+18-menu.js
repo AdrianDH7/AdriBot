@@ -1,3 +1,8 @@
+/* Código Hecho Por GataNina-Li y Modificado Por WillZek
+- https://github.com/GataNina-Li
+- https://github.com/WillZek 
+*/
+
 import { xpRange } from '../lib/levelling.js'
 import PhoneNumber from 'awesome-phonenumber'
 import { promises } from 'fs'
@@ -123,12 +128,10 @@ let handler = async (m, { conn, usedPrefix, command, args, usedPrefix: _p, __dir
 ∘ _${usedPrefix}pornopremium_
 `.trim()
 
-await conn.sendButton(m.chat, menuA, menuB, pp, [
-    ['Menú', '.menu'], ['Todos los menús', '/allmenu'], ['Inventario', '#inventario']
-], fkontak, adReply, m)
+await conn.sendMessage(m.chat, { text: menuA + '\n' + menuB, mentions: mentionedJid }, { quoted: m, contextInfo: fkontak })
 
 } catch (e) {
-    await conn.sendButton(m.chat, `\nTítulo`, 'Error al ejecutar el comando. #report ' + usedPrefix + command, null, [['Reportar error', `#reporte *${usedPrefix + command}*`]], m)
+    await conn.sendMessage(m.chat, { text: `\nTítulo`, footer: 'Error al ejecutar el comando. #report ' + usedPrefix + command, buttons: [{ buttonId: `#reporte *${usedPrefix + command}*`, buttonText: { displayText: 'Reportar error' } }] }, { quoted: m })
     console.log(`❗❗Error ${usedPrefix + command} ❗❗`)
     console.log(e)        
 }}
