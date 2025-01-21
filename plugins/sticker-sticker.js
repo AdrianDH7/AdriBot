@@ -40,7 +40,7 @@ if (!stiker) stiker = e
 } finally {
 if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: '🎩𝐀𝐝𝐫𝐢𝐁𝐨𝐭 - 𝐒𝐭𝐢𝐜𝐤𝐞𝐫✨', body: `AdriBot - MD ✨`, mediaType: 2, sourceUrl: canal, thumbnail: imagen2}}}, { quoted: m })
 
-else return conn.reply(m.chat, `🍭 *_La conversión ha fallado, intenta enviar primero imagen/video/gif y luego responde con el comando._*\n\n> ❤️ Sigue El Canal ❤️`, m, rcanal)
+else return conn.reply(m.chat, `🍭 *_La conversión ha fallado, intenta enviar primero imagen/video/gif y luego responde con el comando._*\n\n> ❤️ Sigue El Canal ❤️`, m)
 
 
 }}
